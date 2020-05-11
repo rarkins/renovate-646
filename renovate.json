@@ -1,0 +1,47 @@
+{
+  "extends": ["config:base"],
+  "regexManagers": [
+    {
+      "fileMatch": ["^kustomization.yaml$"],
+      "matchStrings": [
+        "- github.com\/(?<depName>.*?\/.*?).*?ref=(?<currentValue>.*?)\n"
+      ],
+      "datasourceTemplate": "github-tags"
+    },
+    {
+      "fileMatch": ["^kustomization.yaml$"],
+      "matchStrings": [
+        "- github.com\/(?<depName>.*?\/.*?)(?:\/|\\?).*?ref=(?<currentValue>.*?)\n"
+      ],
+      "datasourceTemplate": "github-tags"
+    },
+    {
+      "fileMatch": ["^kustomization.yaml$"],
+      "matchStrings": [
+        "- github.com\\/(?<depName>.*?\\/.*?)(?:\\/|\\?).*?ref=(?<currentValue>.*?)\\n"
+      ],
+      "datasourceTemplate": "github-tags"
+    },
+    {
+      "fileMatch": ["^kustomization.yaml$"],
+      "matchStrings": [
+        "- github.com\\/(?<depName>.*?\\/.*?)(?:\\/|\\?).*?ref=(?<currentValue>.*?)\n"
+      ],
+      "datasourceTemplate": "github-tags"
+    },
+    {
+      "fileMatch": ["^kustomization.yaml$"],
+      "matchStrings": [
+        "- github.com\\\/(?<depName>.*?\\\/.*?)(?:\\\/|\\?).*?ref=(?<currentValue>.*?)\\n"
+      ],
+      "datasourceTemplate": "github-tags"
+    },
+    {
+      "fileMatch": ["^kustomization.yaml$"],
+      "matchStrings": [
+        "- github.com\\\/(?<depName>.*?\\\/.*?)(?:\\\/|\\?).*?ref=(?<currentValue>.*?)\n"
+      ],
+      "datasourceTemplate": "github-tags"
+    }
+  ]
+}
